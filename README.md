@@ -4,9 +4,9 @@ Dancer Blog Example in [Dancer2::Tutorial](https://metacpan.org/pod/distribution
 This is an example of Dancr micro blog but with a few changes.
 You need to install the following modules:
 
-* Dancer2 - lightweight yet powerful web application framework(libdancer2-perl)
+* Dancer2 - lightweight yet powerful web application framework (libdancer2-perl)
 * SQLite - file-based relational database engine (sqlite3.deb)
-* DBD::SQLite - database object relational mapper (ORM) (libdbd-sqlite3-perl.deb)
+* DBD::SQLite - self-contained RDBMS in a DBI Driver (libdbd-sqlite3-perl.deb)
 * Template::Toolkit - template processing system (libtemplate-perl.deb)
 * File::Slurp - Simple and Efficient Reading/Writing/Modifying of Complete Files (libfile-slurp-perl.deb)
 * File::Spec - portably perform operations on file names (libfile-spec-perl.deb)
