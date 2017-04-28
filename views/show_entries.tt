@@ -1,0 +1,15 @@
+[% IF entries.size %]
+  [% FOREACH id IN entries.keys.nsort %]
+          <div class="blog-post">
+            <h2 class="blog-post-title" id="title-[% entries.$id.id %]">[% entries.$id.title %]</h2>
+            <p class="blog-post-meta">[% entries.$id.datetime %] by <a href="#">[% entries.$id.author %]</a></p>
+            <p class="blog-post-text" id="text-[% entries.$id.id %]">[% entries.$id.text %]</p>
+    [% IF session.logged_in %]
+            <pre><code><button type="button" class="btn btn-xs btn-default editEntry" data-id="[% entries.$id.id %]"><i class="glyphicon glyphicon-pencil"></i> Edit</button> <button type="button" class="btn btn-xs btn-warning deleteEntry" data-id="[% entries.$id.id %]"><i class="glyphicon glyphicon-trash"></i> Delete</button></code></pre>
+    [% END %]
+          </div><!-- /.blog-post -->
+  [% END %]
+[% ELSE %]
+<em>Unbelievable.  No entries here so far</em>
+[% END %]
+

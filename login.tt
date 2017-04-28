@@ -1,0 +1,19 @@
+
+    <div class="container">
+      [% IF err %]<p class=error><strong>Error:</strong> [% err %][% END %]
+      <form action="[% login_url %]" method="post" class="form-signin">
+        <h2 class="form-signin-heading">Ingrese usuario</h2>
+        <label for="inputUser" class="sr-only">Ingrese usuario</label>
+        <input type="text" id="inputUser" class="form-control" name="username" placeholder="Usuario" required autofocus>
+        <label for="inputPassword" class="sr-only">Clave</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Clave" name="password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Recordar usuario
+          </label>
+        </div>
+        <input type="hidden" name="redirect_url" value="/">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Login">Ingrese</button>
+      </form>
+
+    </div> <!-- /container -->

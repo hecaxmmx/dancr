@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="[% settings.charset %]">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEPLA::App</title>
+<link href="[% request.uri_base %]/css/bootstrap.min.css" rel="stylesheet">
+<link href="[% request.uri_base %]/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="[% request.uri_base %]/css/signin.css" rel="stylesheet">
+
+<!-- Grab jQuery from a CDN, fall back to local if necessary -->
+
+</head>
+
+<body>
+[% content %]
+<div id="footer">
+<img src="/images/perldancer.jpg">
+Powered by <a href="http://perldancer.org/">Dancer2</a> [% dancer_version %]
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">/* <![CDATA[ */
+    !window.jQuery && document.write('<script type="text/javascript" src="[% request.uri_base %]/javascripts/jquery.js"><\/script>')
+/* ]]> */</script>
+<script src="[% request.uri_base %]/javascripts/bootstrap.min.js"></script>
+</body>
+</html>

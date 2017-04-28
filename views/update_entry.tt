@@ -1,0 +1,43 @@
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="/">Home</a>
+          <a class="blog-nav-item active" href="#">Edit entry</a>
+          <a class="blog-nav-item" href="/about">About</a>
+     [% IF not session.logged_in %]
+       <a class="blog-nav-item" href="[% login_url %]">Log in</a>
+     [% ELSE %]
+       <a class="blog-nav-item" href="[% logout_url %]">Log out</a>
+     [% END %]
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Dancer Blog Example (Dancr)</h1>
+        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+      </div>
+
+[% IF session.logged_in %]
+<hr>
+  <h2>Editing blog entry #[% id_post %]</h3>
+  <form action="[% add_entry_url %]" method="post" class="add-entry">
+    <div class="form-group">
+      <label for="text_title">Title:</label>
+      <input type="text" class="form-control" name="title" id="text_title" value="[% title_post %]">
+      <label for="comment">Text for entry:</label>
+      <textarea name=text class="form-control" rows="5" id="comment">[% text_post %]</textarea>
+      <input type="hidden" value="[% id_post %]" name="id">
+      <input type="submit" value="Save">
+      <input type="button" class="btn btn-sm btn-link cancel" value="Cancel">
+    </div>
+  </form>
+<hr>
+[% ELSE %]
+  <div class="alert alert-danger" role="alert">
+    <strong>You're not logged in.</strong> Please log in to create new entries in this blog.
+  </div>
+[% END %]
